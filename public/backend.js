@@ -1,5 +1,3 @@
-
-
 let myData = {};
 
 async function getResponseFromAPI()
@@ -17,14 +15,10 @@ async function getResponseFromAPI()
       };
       
       xhr.onprogress = function(event) {
-        if (event.lengthComputable) {
             myData = JSON.parse(this.response);
             console.log("Successfully Fetched Data !");
             console.log(myData);
             printAllData();
-        } else {
-          console.log(`Received ${event.loaded} bytes`); // no Content-Length
-        }
       };
 
       xhr.onerror = function() {
