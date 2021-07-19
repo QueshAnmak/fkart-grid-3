@@ -5,9 +5,9 @@ let myData = {};
 async function getResponseFromAPI()
 {
     let xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://20.198.79.186:5000/users');
+    xhr.open('GET', 'https://20.198.79.186:5000/users');
     // xhr.responseType = 'json';
-    xhr.setRequestHeader('Access-Control-Allow-Origin', 'http://20.198.79.186');
+    xhr.setRequestHeader('Access-Control-Allow-Origin', 'https://20.198.79.186');
     xhr.setRequestHeader('Access-Control-Allow-Methods', 'GET, POST');
     xhr.send();
     xhr.onload = function() {
